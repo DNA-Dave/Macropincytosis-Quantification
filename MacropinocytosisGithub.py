@@ -164,9 +164,9 @@ def statistics(group1, group2):
     group2Means = []
     for keys in mapForStatisticalAnalysis:
         if group1 == keys[1]:
-            group1Means.append(mapForStatisticalAnalysis[keys][0])
+            group1Means.append(mapForStatisticalAnalysis[keys])
         if group2 == keys[1]:
-            group2Means.append(mapForStatisticalAnalysis[keys][0])       
+            group2Means.append(mapForStatisticalAnalysis[keys])       
     twoConditions[group1] = group1Means
     twoConditions[group2] = group2Means
     print('P value ', st.ttest_ind(group1Means, group2Means, axis=0, equal_var=False)[1])  
